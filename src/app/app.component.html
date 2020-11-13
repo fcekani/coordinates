@@ -1,0 +1,19 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container-fluid">
+    <h1 class="display-4">Upload File</h1>
+    <div class="mt-4">
+      <div class="row align-items-center">
+        <div class="col-11">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" (change)="uploadFile($event)">
+            <label class="custom-file-label" for="customFile">{{ fileName }}</label>
+          </div>
+        </div>
+        <div class="col-1">
+          <button *ngIf="uploadedFile" type="button" class="btn btn-md btn-outline-warning text-black" (click)="convertFile()">Convert File</button>
+          <button *ngIf="jsonFile" type="button" class="btn btn-md btn-outline-success" (click)="downloadToExcel()">Download File</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
